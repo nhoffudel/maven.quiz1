@@ -9,7 +9,13 @@ public class Encryptor {
        * @return Upper case string of the first letter of each word
        */
       public String acronym(String phrase) {
-          return null;
+          String ans = "";
+          String[] split = phrase.split(" ");
+          for (String i: split) {
+              char[] word = i.toCharArray();
+              ans += word[0];
+          }
+          return ans.toUpperCase();
       }
 
       /**
@@ -25,6 +31,13 @@ public class Encryptor {
        * @return the encrypted string by shifting each character by three character
        */
       public String encrypt(String word) {
-          return null;
+          char[] letters  = word.toCharArray();
+          String ans = "";
+          for (char i: letters) {
+              if (((i >= 'x') && (i <= 'z')) || ((i >= 'X') && (i <= 'Z'))) i -= 23;
+              else i+= 3;
+              ans += i;
+          }
+          return ans;
       }
 }
