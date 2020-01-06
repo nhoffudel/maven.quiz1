@@ -12,9 +12,10 @@ public class MathUtilities {
      * @return the factorial of the number
      */
     public Integer factorial(Integer number) {
-        //I haven't done recursion in a while, thought it might be fun
-        if (number >= 1) return number * factorial(number - 1);
-        else return 1;
+        if (number == 0) return 1;
+        Integer ans = number;
+        for (int i = number - 1; i > 0; i--) ans *= i;
+        return ans;
     }
 
     /**
