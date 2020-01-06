@@ -12,9 +12,8 @@ public class MathUtilities {
      * @return the factorial of the number
      */
     public Integer factorial(Integer number) {
-        if (number == 0) return 1;
-        Integer ans = number;
-        for (int i = number - 1; i > 0; i--) ans *= i;
+        Integer ans = 1;
+        for (int i = 1; i <= number; i++) ans *= i;
         return ans;
     }
 
